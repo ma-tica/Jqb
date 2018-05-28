@@ -39,28 +39,6 @@
 					<target>${java.version}</target>
 				</configuration>
 			</plugin>
-
-			<!-- deploy maven bundle to local git repo -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-install-plugin</artifactId>
-				<version>${maven-install-version}</version>
-				<executions>
-					<execution>
-						<phase>install</phase>
-						<goals>
-							<goal>install-file</goal>
-						</goals>
-						<configuration>
-							<artifactId>${project.artifactId}</artifactId>
-							<version>${project.version}</version>
-							<packaging>jar</packaging>
-							<file>target/${project.artifactId}-${project.version}.jar</file>
-							<localRepositoryPath>/home/matteo/Clienti/MATICA/maven-repo</localRepositoryPath>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 
